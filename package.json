@@ -1,7 +1,7 @@
 {
   "name": "sjabloon",
   "version": "1.0.0",
-  "description": "## [Surge link](https://xxxxxxxxx.surge.sh \"Surge link\")",
+  "description": "## [Surge link](https://ExamenhtmlcssLarsKerstens.surge.sh \"Surge link\")",
   "main": "index.js",
   "scripts": {
     "start": "npm run dev",
@@ -11,7 +11,7 @@
     "build": "npm-run-all --serial clean sass-prod deploy",
     "clean": "rm -r ./dist/",
     "sass-prod": "sass ./src/css/styles.scss ./dist/style.css --no-source-map --style=compressed",
-    "deploy": "surge . --domain https://XXXXXXXXXXXXX.surge.sh"
+    "deploy": "surge . --domain https://ExamenhtmlcssLarsKerstens.surge.sh"
   },
   "keywords": [],
   "author": "",

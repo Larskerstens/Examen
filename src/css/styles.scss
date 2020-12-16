@@ -20,7 +20,7 @@ body {
 // Header
 .header {
   &__image {
-    background-image: url("./images/background.jpg"); //ik heb de image in deze folder geplaatst want al ze in de assets folder zat op locatie ../#assets/images/background.jpg werkte het niet ...
+    background-image: url("../assets/images/background.jpg");
     background-color: rgb(194, 190, 190);
     background-position: center;
     background-size: cover;
