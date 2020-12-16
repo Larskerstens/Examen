@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Menutekst</title>
+    <title>Mountain</title>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,35 +11,119 @@
   <body>
     <!-------- header ------------------------------------------------------------->
 
-    <header>
-      <h1>Hoofdtitel 3</h1>
+    <header class="header">
+      <div class="header__image">
+        <!-------- navigatie ---------------------------------------------------------->
+        <div class="container">
+          <nav class="header__image__nav">
+            <div class="logo">
+              <a href="#" class="icon">
+                <svg class="icon icon-logo">
+                  <use xlink:href="./src/icons/symbol-defs.svg#icon-logo"></use>
+                </svg>
+              </a>
+              <p><a href="#">Raleway</a></p>
+            </div>
+            <ul class="navigatie">
+              <li><a href="#" title="link naar homepage">Home</a></li>
+              <li class="active">
+                <a href="#" title="link naar ">About Us</a>
+              </li>
+              <li><a href="#" title="link naar ">Portfolio</a></li>
+              <li><a href="#" title="link naar ">Features</a></li>
+              <li><a href="#" title="link naar ">Blog</a></li>
+              <li><a href="#" title="link naar ">Pricing</a></li>
+              <li><a href="#" title="link naar contact">Contact</a></li>
+              <a href="#" class="icon">
+                <svg class="icon icon-search">
+                  <use
+                    xlink:href="./src/icons/symbol-defs.svg#icon-search"
+                  ></use>
+                </svg>
+              </a>
+            </ul>
+          </nav>
+          <div class="header__image__text">
+            <h2>Some slogan here</h2>
+            <h1>Our amazing tagline</h1>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus
+              mollitia natus facere repellat sapiente laborum distinctio minus,
+              pariatur incidunt! Mollitia, eius!
+            </p>
+            <a href="#" class="button">Click me</a>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="icon-arrow-left">
+        <svg class="icon icon-left">
+          <use xlink:href="./src/icons/symbol-defs.svg#icon-left"></use>
+        </svg>
+      </a>
+      <a href="#" class="icon-arrow-right">
+        <svg class="icon icon-right">
+          <use xlink:href="./src/icons/symbol-defs.svg#icon-right"></use>
+        </svg>
+      </a>
     </header>
-
-    <!-------- navigatie ---------------------------------------------------------->
-
-    <nav>
-      <ul class="nav">
-        <li class="active"><a href="#" title="link naar homepage">Home</a></li>
-        <li><a href="#" title="link naar ">Nav2</a></li>
-        <li><a href="#" title="link naar ">Nav3</a></li>
-        <li><a href="#" title="link naar ">Nav4</a></li>
-        <li><a href="#" title="link naar contact">Contact</a></li>
-      </ul>
-    </nav>
 
     <!-------- main --------------------------------------------------------------->
 
-    <main>
-      <a href="#" class="icon icon--remove">
-        <svg class="icon icon-tow-truck">
-          <use xlink:href="./src/icons/symbol-defs.svg#icon-tow-truck"></use>
-        </svg>
-      </a>
+    <main class="content container">
+      <article class="content__design">
+        <a href="#" class="icon">
+          <svg class="icon icon-pencil">
+            <use xlink:href="./src/icons/symbol-defs.svg#icon-pencil"></use>
+          </svg>
+        </a>
+        <h3>Web & App Design</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae illum
+          reiciendis ea vel nulla vitae at sed!
+        </p>
+        <hr />
+      </article>
+      <article class="content__development">
+        <a href="#" class="icon">
+          <svg class="icon icon-stack">
+            <use xlink:href="./src/icons/symbol-defs.svg#icon-stack"></use>
+          </svg>
+        </a>
+        <h3>Development</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae illum
+          reiciendis ea vel nulla vitae at sed!
+        </p>
+        <hr />
+      </article>
+      <article class="content__customization">
+        <a href="#" class="icon">
+          <svg class="icon icon-gear">
+            <use xlink:href="./src/icons/symbol-defs.svg#icon-gear"></use>
+          </svg>
+        </a>
+        <h3>Customization</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae illum
+          reiciendis ea vel nulla vitae at sed!
+        </p>
+        <hr />
+      </article>
+      <article class="content__marketing">
+        <a href="#" class="icon">
+          <svg class="icon icon-suitcase">
+            <use xlink:href="./src/icons/symbol-defs.svg#icon-suitcase"></use>
+          </svg>
+        </a>
+        <h3>Marketing</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae illum
+          reiciendis ea vel nulla vitae at sed!
+        </p>
+        <hr />
+      </article>
     </main>
 
-    <!-------- footer ------------------------------------------------------------->
-
-    <footer></footer>
     <script defer src="./src/icons/svgxuse.js"></script>
   </body>
 </html>

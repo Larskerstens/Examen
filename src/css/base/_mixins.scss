@@ -9,13 +9,21 @@
 @mixin make-col($cols, $gap) {
   display: flex;
   flex-wrap: wrap;
+
   > *:nth-child(1n + 0) {
-    min-width: calc(calc(100% - #{($cols - 1) * $gap}) / #{$cols});
     margin: 0 $gap $gap 0;
+    width: calc((100% - #{($cols - 1) * $gap}) / #{$cols});
   }
+
   > *:nth-child(#{$cols}n + 0) {
     margin-right: 0;
   }
+}
+
+%responsive {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 @mixin triangle($direction, $sizeH, $sizeV, $color) {
