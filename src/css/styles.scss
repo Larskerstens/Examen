@@ -54,6 +54,11 @@ body {
         padding: 15px 50px;
         border-radius: 3px;
         background-color: $bruin;
+        transition: all 300ms ease-in-out;
+        &:hover {
+          border-bottom: 2px solid $bruin;
+          background-color: $donkerbruin;
+        }
       }
     }
     // Nav
@@ -73,22 +78,45 @@ body {
       .logo {
         display: flex;
         align-items: center;
+        svg {
+          transition: all 300ms ease-in-out;
+        }
         p {
           font-size: 34px;
+
           a {
             color: $wit;
+            transition: all 300ms ease-in-out;
+          }
+        }
+        &:hover {
+          a {
+            color: $bruin;
+          }
+          svg {
+            fill: $bruin;
           }
         }
       }
       .navigatie {
         display: flex;
         align-items: center;
-        li {
+        &__item {
           a {
             color: $wit;
             padding: 6px;
             margin: 0 17px;
             font-size: 14px;
+            transition: all 300ms ease-in-out;
+          }
+          &--active,
+          &:hover {
+            a {
+              color: $bruin;
+            }
+          }
+          &:nth-of-type(7) {
+            margin-right: 30px;
           }
         }
         .icon {
@@ -96,8 +124,34 @@ body {
           width: 24px;
           height: 24px;
           //font-size: 55px; werkt niet
-          margin-left: 30px;
+          transition: all 300ms ease-in-out;
+          &:hover {
+            svg {
+              fill: $bruin;
+            }
+          }
         }
+      }
+    }
+  }
+  .dots {
+    display: flex;
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%); // om de text in het midden te plaatsen
+    .dot {
+      display: block;
+      margin: 0 0.3em;
+      width: 12px;
+      height: 12px;
+      background: $lichtgrijs;
+      border-radius: 50%;
+      transition: all 300ms ease-in-out;
+      &--active,
+      &:hover {
+        box-shadow: 0px 0px 0px 3px rgba($bruin, 1);
+        background: none;
       }
     }
   }
