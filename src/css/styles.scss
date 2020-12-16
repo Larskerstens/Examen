@@ -17,6 +17,10 @@ body {
   background-color: $wit;
 }
 
+.icon-menu {
+  display: none;
+}
+
 // Header
 .header {
   &__image {
@@ -33,7 +37,7 @@ body {
       left: 50%; // om de text in het midden te plaatsen
       transform: translate(-50%, -50%); // om de text in het midden te plaatsen
       color: white;
-      width: 580px;
+      max-width: 580px;
       h2 {
         font-size: 36px;
         font-weight: 400;
@@ -101,6 +105,7 @@ body {
       .navigatie {
         display: flex;
         align-items: center;
+        margin-right: -210px;
         &__item {
           a {
             color: $wit;
@@ -182,17 +187,20 @@ body {
   padding: 80px 0;
   @include make-col(4, 30px);
   text-align: center;
+
   .icon {
     fill: $donkerbruin;
     width: 48px;
     height: 48px;
     //font-size: 48px; dit wou niet werken
+    transition: all 300ms ease-in-out;
   }
   h3 {
     font-weight: 700;
     font-size: 22px;
     color: $donkerbruin;
     padding: 30px 0px 25px 0px;
+    transition: all 300ms ease-in-out;
   }
   p {
     font-family: $second-font;
@@ -204,5 +212,92 @@ body {
   hr {
     width: 70px;
     border: 1px solid $bruin;
+    transition: all 300ms ease-in-out;
+  }
+  &__development {
+    .icon {
+      fill: $bruin;
+    }
+    h3 {
+      color: $bruin;
+    }
+    hr {
+      border: 2px solid rgba($bruin, $alpha: 0.5);
+    }
+  }
+  &__design:hover,
+  &__development:hover,
+  &__customization:hover,
+  &__marketing:hover {
+    .icon {
+      fill: $bruin;
+    }
+    h3 {
+      color: $bruin;
+    }
+    hr {
+      border: 2px solid rgba($bruin, $alpha: 0.5);
+    }
+  }
+}
+@media screen and (max-width: 1090px) {
+  .header {
+    &__image {
+      &__nav {
+        .navigatie {
+          display: none;
+        }
+        .icon {
+          margin: 0;
+        }
+        .icon-menu {
+          display: block;
+          width: 30px;
+        }
+      }
+      &__text {
+        h2 {
+          font-size: 24px;
+        }
+        h1 {
+          font-size: 36px;
+        }
+        p {
+          font-size: 16px;
+        }
+        .button {
+          padding: 10px 30px;
+        }
+      }
+    }
+    .icon {
+      &-arrow-left {
+        display: none;
+      }
+      &-arrow-right {
+        display: none;
+      }
+    }
+  }
+  .content {
+    @include make-col(3, 20px);
+    padding: 80px 15px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .content {
+    @include make-col(2, 20px);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .content {
+    @include make-col(1, 20px);
+    padding: 80px 7px 20px 7px;
+  }
+  .header {
+    .dots {
+      display: none;
+    }
   }
 }
