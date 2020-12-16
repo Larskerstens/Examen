@@ -1,4 +1,9 @@
-src/
-assets/
+src/css/
+src/js/
+assets/fonts/
+assets/svgs/
+design.jpg
+design.psd
+fonts.png
 package.json
 readme.md
